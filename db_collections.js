@@ -32,5 +32,3 @@ MongoClient.connect( url, {useNewUrlParser: true, useUnifiedTopology: true}, fun
   });
 
 });
-
-
