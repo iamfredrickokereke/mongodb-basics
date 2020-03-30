@@ -11,7 +11,7 @@ var Admin = "Kelly Eric";
 // make client conect to mongodb service, pass 3 arguments.
 MongoClient.connect( url, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, db) {
 
-  //check if error  
+  //check if any error  
 
   if (err) throw err;
 
