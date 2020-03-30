@@ -13,7 +13,7 @@ MongoClient.connect( url, {useNewUrlParser: true, useUnifiedTopology: true}, fun
 
   var dbo = db.db("kelly_eric");
 
- //check if error
+ //check if any error
   
   if (err) throw err;
   console.log("Database created by " + Admin);
