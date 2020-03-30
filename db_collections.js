@@ -1,4 +1,3 @@
-
 // make client
 var MongoClient = require('mongodb').MongoClient;
 
