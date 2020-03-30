@@ -1,2 +1,18 @@
-# mongodb-basics
-All resources related to Task 2 NodeJS class on Start.ng Program
+### TODO:
+- [x] Screenshot 1
+- [x] Screenshot 2
+- [x] Screenshot 3
+
+
+<img src="./images/screen1.PNG" alt="Task One" />
+<img src="./images/screen1.PNG" alt="Task One" />
+<img src="./images/screen1.PNG" alt="Task One" />
+
+
+> All Task done :joy:
+
+
+```javascript
+var mongoDb = require("mongo")
+
+```
