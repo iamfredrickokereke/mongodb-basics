@@ -1,0 +1,24 @@
+{
+  "name": "mongodb-basics",
+  "version": "1.0.0",
+  "description": "- [x] Screenshot 1 - Display Mongo.exe and Mongod.exe\r - [x] Screenshot 2 - Display Output of Created database with slack username\r - [x] Screenshot 3 - Display Collections created named __\"interns\"__",
+  "main": "index.js",
+  "dependencies": {
+    "mongodb": "^3.5.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamfredrickokereke/mongodb-basics.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamfredrickokereke/mongodb-basics/issues"
+  },
+  "homepage": "https://github.com/iamfredrickokereke/mongodb-basics#readme"
+}
