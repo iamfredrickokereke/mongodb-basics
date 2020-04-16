@@ -1,6 +1,6 @@
 # CONNECTING TO A MONGO DATABASE WITH NODEJS
 
-### Below are screenshots for the expected tasks, refer above for the codebase :point_up:
+### Below are screenshots for the expected tasks, refer to the crud-basics branch above for the codebase :point_up:
 
 
 ### TODO:
