@@ -32,4 +32,4 @@ const theMovies = (db, callback) => {
     });
  };
 
-module.exports = insertMovies;
+module.exports = theMovies;
