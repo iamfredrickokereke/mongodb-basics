@@ -1,13 +1,14 @@
-let MongoClient = require('mongodb').MongoClient;
-let url = "mongodb://localhost:27017/";
-let movieList =
- [
+const { MongoClient } = require('mongodb');
+
+const  url = "mongodb://localhost:27017/";
+
+let movieList = [
   {movie: "The Banker", year: "2020", rating: 8},
   {movie: "Bad Boys", year: "2020", rating: 7}, 
   {movie: "The Hunt", year: "2020", rating: 7}, 
   {movie: "Bloodshot", year: "2020", rating: 7.5}, 
   {movie: "First Cow", year: "2020", rating: 6.5}
- ];
+];
 
 
 const collections = function(err, db) {
@@ -21,4 +22,4 @@ const collections = function(err, db) {
   });
 };
 
-MongoClient.connect(url, collections);
+MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}, collections);
