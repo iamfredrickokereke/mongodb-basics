@@ -1,7 +1,7 @@
 let { MongoClient } = require('mongodb');
 let url = "mongodb://localhost:27017/";
 
-MongoClient.connect(url, (err, db)=>{
+MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}, (err, db)=>{
   if (err) throw err;
   let dbo = db.db("moviesdb");
   let movieCollections = dbo.collection("myMovies");
