@@ -1,34 +1,35 @@
-// make client
-var MongoClient = require('mongodb').MongoClient;
 
-//Append the Database name (/slackname), you want to connect to the base URL.
-var url = "mongodb://localhost:27017/kelly_eric";
+// import the assert module for checks
 
-var Admin = "Kelly Eric";
+const assert = require('assert');
 
-// make client connect to mongodb service/server
-MongoClient.connect( url, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, db) {
+// create the function to export
 
-  // db object that points to the database "kelly_eric"  and store in dbo
+const theMovies = (db, callback) => {
 
-  var dbo = db.db("kelly_eric");
+    //creating the myMovies collection
 
- //check if any error
-  
-  if (err) throw err;
-  console.log("Database created by " + Admin);
+    let myMovies = db.collection("movies");
 
-  // db pointing to kelly_eric
-  console.log("Switched to "+dbo.databaseName+" database");
+    //available Documents
+    let movies = 
 
-  // create 'users' collection in newdb database
-  dbo.createCollection("interns", function(err, result) {
+    [ 
+      {movie: "The Banker", year: "2020", rating: 8},  
+      {movie: "Bad Boys", year: "2020", rating: 7}, 
+      {movie: "The Hunt", year: "2020", rating: 7}, 
+      {movie: "Bloodshot", year: "2020", rating: 7.5},
+      {movie: "First Cow", year: "2020", rating: 6.5} 
+    ]
 
-      if (err) throw err;
-      console.log("Interns Collection has been created!");
+    //insert movies into the collection and checking for error
+    myMovies.insertMany(movies, function(err, result){
+    assert.equal(err, null);
+    assert.equal(5, result.result.n);
+    assert.equal(5, result.ops.length);
+    console.log("The total number of Movies inserted: "+ result.insertedCount);
+    callback(result);
+    });
+ };
 
-      // close the connection to db
-      db.close();
-  });
-
-});
+module.exports = insertMovies;
